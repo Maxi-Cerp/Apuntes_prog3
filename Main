@@ -34,7 +34,7 @@ public class Main{
                     break;
             }
         }
-        System.out.println("¡Hasta luego!");
+        System.out.println("¡Nos vemos!");
     }
 
     private static void crearCasa() {
@@ -57,17 +57,15 @@ public class Main{
         boolean piscina = (lector.nextLine().equalsIgnoreCase("S"));
 
         unaCasa = new Casa(ancho, largo, canCuartos, direccion, piscina);
-        System.out.println("¡Casa creada exitosamente!");
+        System.out.println("Casa creada");
     }
 
     private static void mostrarCasa() {
         if (unaCasa == null) {
-            System.out.println("No se ha creado ninguna casa todavía.");
+            System.out.println("No hay casa");
         } else {
-            System.out.println("La casa tiene un ancho de " + unaCasa.getancho() + " metros, un largo de "
-                    + unaCasa.getlargo() + " metros, " + unaCasa.getcanCuartos() + " cuartos, se encuentra en "
-                    + unaCasa.getdireccion() + ", y " + (unaCasa.getpiscina() ? "sí" : "no") + " tiene piscina.");
-            System.out.println("El área total de la casa es de " + unaCasa.area() + " metros cuadrados.");
+        	System.out.println(unaCasa.ficha());
+            
         }
     }
 }
